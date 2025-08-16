@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Braintree Demo</title>
+    <script src="https://js.braintreegateway.com/web/3.125.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.125.0/js/hosted-fields.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Welcome to the Braintree demo!</h1>
+
+    <!-- Amount Input -->
+    <div id="amount-box">
+      <label for="amount">Please specify your payment amount:</label>
+      <input type="number" id="amount" placeholder="Enter amount" />
+    </div>
+
+    <!-- Customer ID Input + Search -->
+    <div id="customer-id-box">
+      <label for="amount">Please enter your Customer ID (if there is any):</label>
+      <input type="text" id="customer-id" placeholder="Enter your Customer ID" />
+      <button type="button" id="search-customer-btn">Search</button>
+    </div>
+
+    <!-- Checkout Form -->
+    <div id="app">
+      <form id="payment-form">
+        <label>Card Number</label>
+        <div id="card-number"></div>
+
+        <label>Expiration Date</label>
+        <div id="expiration-date"></div>
+
+        <label>CVV</label>
+        <div id="cvv"></div>
+
+        <div id="store-card-consent">
+          <input type="checkbox" id="store-card" />
+        </div>
+        <label for="store-card"
+          >I consent to store this card for future payments</label
+        >
+
+        <button type="submit">Pay</button>
+      </form>
+    </div>
+
+    <!-- Display token info -->
+    <div id="customer-info"></div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>

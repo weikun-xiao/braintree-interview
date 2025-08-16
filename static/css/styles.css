@@ -1,0 +1,214 @@
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f6f8fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+}
+
+#app {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+#amount-box {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+#amount-box label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+#amount-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#customer-id-box {
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+#customer-id-box label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+#customer-info {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Payment method cards */
+.payment-method {
+  margin: 15px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.payment-method:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Card text */
+.payment-method p {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Pay with token button */
+.pay-with-token-btn {
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pay-with-token-btn:hover {
+  background-color: #005bb5;
+}
+
+/* Pay with Customer button */
+#customer-info button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+#customer-info button:hover {
+  background-color: #218838;
+}
+#customer-id-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin: 15px 0 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+#card-number,
+#expiration-date,
+#cvv {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  height: 20px;
+  background: #fafafa;
+  transition: border-color 0.2s ease;
+}
+
+#card-number.focused,
+#expiration-date.focused,
+#cvv.focused {
+  border-color: #4a90e2;
+  background: #fff;
+}
+
+#store-card-consent {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+#store-card-consent input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4a90e2;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #357ab8;
+}
+
+#message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  display: none;
+}
+
+#message.success {
+  background: #e6f9ed;
+  color: #2d8659;
+  border: 1px solid #a3e6b1;
+}
+
+#message.error {
+  background: #fdeaea;
+  color: #b02a37;
+  border: 1px solid #f5a3a3;
+}
