@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import braintree
+import os
 
 app = Flask(__name__)
 
@@ -137,4 +138,5 @@ def checkout_with_customer():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8080)
+    port = int(os.environ.get("PORT", 8080))  # Use Render's assigned port if available, else 8080 locally
+    app.run(host="0.0.0.0", port=port, debug=True)
